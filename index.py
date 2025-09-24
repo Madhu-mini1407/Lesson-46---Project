@@ -1,32 +1,12 @@
 class Expression:
-    def __init__(self, a, b, c):
-        self.a = a
-        self.b = b
-        self.c = c
+    def __init__(self, num1, num2, num3):
+        self.num1 = num1
+        self.num2 = num2
+        self.num3 = num3
 
-    def add(self):
-        return self.a + self.b + self.c
+    def add_numbers(self):
+        result = self.num1 + self.num2 + self.num3
+        print("The sum of the three numbers is:", result)
 
-    def subtract(self):
-        return self.a - self.b - self.c
-
-    def multiply(self):
-        return self.a * self.b * self.c
-
-    def divide(self):
-        if self.b != 0:
-            return self.a / self.b/ self.c
-        else:
-            return "Division by zero is not allowed"
-
-    def display(self):
-        print(f"Numbers: {self.a}, {self.b},{self.c}")
-        print(f"Addition: {self.add()}")
-        print(f"Subtraction: {self.subtract()}")
-        print(f"Multiplication: {self.multiply()}")
-        print(f"Division: {self.divide()}")
-
-
-if __name__ == "__main__":
-    expr = Expression(20, 5,2)
-    expr.display()
+exp1 = Expression(10, 20, 30)
+exp1.add_numbers()
